@@ -1,8 +1,12 @@
 const convertBtn = document.querySelector('.convert-button');
 const URLinput = document.querySelector('.URL-input');
 
+console.log(process.env);
+
 function sendURL(URL) {
-  window.location.href = `http://localhost:4000/download?URL=${URL}`;
+  window.location.href = `http://104.248.236.245:4000/download?URL=${URL}`;
+
+  // window.location.href = `http://localhost:4000/download?URL=${URL}`;
 }
 
 convertBtn.addEventListener('click', () => {
@@ -14,12 +18,10 @@ convertBtn.addEventListener('click', () => {
   const regexp2 = /^https:\/\/youtu.be\/\w+/gm;
   if (regexp2.test(URLinput.value) === true || regexp.test(URLinput.value) === true) {
     error.setAttribute('hidden', '');
-    console.log('regex passed');
     button.innerHTML = 'Downloading...';
     sendURL(URLinput.value);
     button.innerHTML = 'Done!';
   } else {
-    console.log('regex failed');
     error.removeAttribute('hidden');
   }
 });
