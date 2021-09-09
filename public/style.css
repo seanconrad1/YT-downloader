@@ -23,6 +23,12 @@
   color: var(--purple);
 }
 
+.input-container{
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+}
+
 .URL-input, .convert-button {
   font-size:1.3em;
   padding:5px 10px;
@@ -57,11 +63,10 @@
     font-size: 3vh;
   }
   .URL-input {
-    height: 10vh;
     font-size: 2vh;
   }
   .convert-button {
-    height: 10.5vh;
+
     font-size: 2vh;
   }
 }
