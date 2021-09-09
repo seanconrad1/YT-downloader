@@ -1,0 +1,47 @@
+:root {
+  --background:#282a36;
+  --current-line: #44475a;
+  --selection: #44475a;
+  --foreground: #f8f8f2;
+  --comment: 	#6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+  --purple: #bd93f9;
+}
+
+* {
+  text-align: center;
+  background-color: var(--background);
+}
+.heading {
+  font-family: Arial;
+  margin-top:40vh;
+  color: var(--purple);
+}
+
+.URL-input, .convert-button {
+  font-size:1.3em;
+  padding:5px 10px;
+}
+.URL-input {
+  border-radius:4px 0px 0px 4px;
+  width:30em;
+  text-align: left;
+  border:2px solid var(--foreground);
+  background: var(--current-line);
+  outline:none;
+  color: var(--pink)
+}
+.URL-input:focus {
+  border:2px solid var(--comment);
+}
+.convert-button {
+  border-radius:0px 4px 4px 0px;
+  border:2px solid var(--foreground);
+  background: var(--selection);
+  color:var(--foreground);
+}
