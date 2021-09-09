@@ -16,7 +16,11 @@ app.get('/download', (req, res) => {
 
   res.header('Content-Disposition', 'attachment; filename="video.mp4"');
 
-  ytdl(URL, { format: 'mp4', quality: 'highestaudio' }).pipe(res);
+  try {
+    ytdl(URL, { format: 'mp4', quality: 'highestaudio' }).pipe(res);
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 app.listen(4000, () => {
