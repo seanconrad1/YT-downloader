@@ -29,7 +29,7 @@
 }
 .URL-input {
   border-radius:4px 0px 0px 4px;
-  width:30em;
+  width:30vh;
   text-align: left;
   border:2px solid var(--foreground);
   background: var(--current-line);
@@ -51,4 +51,17 @@
   padding:5px 10px;
   font-family: Arial;
   margin-top:10vh;
+}
+@media only screen and (min-width: 375px){
+  .heading {
+    font-size: 3vh;
+  }
+  .URL-input {
+    height: 10vh;
+    font-size: 2vh;
+  }
+  .convert-button {
+    height: 10.5vh;
+    font-size: 2vh;
+  }
 }

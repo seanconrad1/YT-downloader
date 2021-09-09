@@ -11,14 +11,15 @@ convertBtn.addEventListener('click', () => {
   const button = document.getElementsByTagName('button')[0];
 
   const regexp = /^https:\/\/www.youtube.com\/watch\?v=\w+/gm;
-  if (regexp.test(URLinput.value) === false) {
-    console.log('regex failed');
-    error.removeAttribute('hidden');
-  } else {
+  const regexp2 = /^https:\/\/youtu.be\/\w+/gm;
+  if (regexp2.test(URLinput.value) === true || regexp.test(URLinput.value) === true) {
     error.setAttribute('hidden', '');
     console.log('regex passed');
     button.innerHTML = 'Downloading...';
     sendURL(URLinput.value);
     button.innerHTML = 'Done!';
+  } else {
+    console.log('regex failed');
+    error.removeAttribute('hidden');
   }
 });
