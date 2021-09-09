@@ -13,6 +13,7 @@ convertBtn.addEventListener('click', () => {
   console.log(`URL: ${URLinput.value}`);
   const error = document.getElementById('error');
   const button = document.getElementsByTagName('button')[0];
+  error.removeAttribute('hidden');
 
   const regexp = /^https:\/\/www.youtube.com\/watch\?v=\w+/gm;
   const regexp2 = /^https:\/\/youtu.be\/\w+/gm;
