@@ -27,6 +27,8 @@
   display: flex;
   flex-direction: row;
   height: 10vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .URL-input, .convert-button {
