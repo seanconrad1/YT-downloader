@@ -5,14 +5,19 @@
   <link rel="stylesheet" href="style.css">
   <title>YouTube Downloader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta content="True" name="HandheldFriendly" />
+  <meta name="viewport" content="width=device-width" />
 </head>
 
 <body>
   <h1 class="heading">Youtube Downloader</h1>
+  <div>https://www.youtube.com/watch?v=1mTWeTYsKwM</div>
   <div class="input-container">
-    <input type="url" class="URL-input" placeholder="Video URL e.g. https://www.youtube.com/watch?v=iv8GW1GaoIc">
+    <input type="url" class="URL-input" value="https://www.youtube.com/watch?v=1mTWeTYsKwM
+    " placeholder="Video URL e.g. https://www.youtube.com/watch?v=iv8GW1GaoIc">
     <button onclick="downloadVideo()" class="convert-button">Download</button>
   </div>
+  <p><a href="video.mp4" download='video.mp4'>1. DOWNLOAD #1 VIDEO</a></p>
   <div class="error" hidden id="error">This needs to be a youtube video url e.g.
     https://www.youtube.com/watch?v=iv8GW1GaoIc
     <br>
